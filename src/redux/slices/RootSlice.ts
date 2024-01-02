@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 const rootSlice = createSlice({
     name: "root",
     initialState: {
-        name: "Plant Owner's Name",
+        name: "Owner's Name",
         family: "Plant's Family",
         genus: "Plant's Genus ",
         species: "Plant's Species",

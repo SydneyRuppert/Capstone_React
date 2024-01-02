@@ -4,6 +4,7 @@ import Button from './Button'
 import { signInWithPopup, signOut } from 'firebase/auth'
 import { auth, Providers } from '../config/firebase'
 
+
 function Navbar() {
 
     const [isVisible, setIsVisible] = useState(false)
@@ -27,11 +28,11 @@ function Navbar() {
     const clicked = () => {
         setIsVisible(false)
     }
-
-
+      
     return (
         <nav className="flex items-center justify-between flex-wrap bg-black p-6">
             <div className="flex items-center flex-shrink-0 text-white mr-6">
+                <i className="fa-solid fa-seedling" />
                 <Link to='/' className='font-semibold text-xl tracking-tight'>Plant App</Link>
             </div>
             <div className='block'>
@@ -70,15 +71,6 @@ function Navbar() {
                         </div>
 
                     </Button>
-                    {/* <Button className='p-3 m-5 bg-black justify-center'>
-                        <div>
-                            <Link to='/InventoryForm' onClick={ clicked} className='flex place-itmes-center mt-4 lg:inline-block lg:mt-0
-                             text-teal-200 hover:text-white mr-4'>
-                                Inventory
-                            </Link>
-                        </div>
-
-                    </Button> */}
                     {
                         !auth.currentUser ?
 

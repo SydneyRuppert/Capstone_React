@@ -7,7 +7,7 @@ import { useGetData } from '../custom-hooks/FetchData';
 
 
 const columns: GridColDef[] = [
-    { field: 'id', headerName: "ID", width: 90, hideable: true},
+    { field: 'id', headerName: "ID", width: 90, hide: true},
     { field: 'name', headerName: "Owner's Name", flex: 1},
     { field: 'family', headerName: "Plant's Family", flex: 1},
     { field: 'genus', headerName: "Plant's Genus", flex: 1},
@@ -62,7 +62,7 @@ function DataTable() {
             style={{ height: 400, width: '100%'}}
         >
             <h2 className="p-3 bg-slate-300 my-2 rounded">My Plants</h2>
-            <DataGrid rows={PlantData} columns={columns} rowsPerPageOptions={[5]}
+            <DataGrid rows={PlantData} columns={columns} rowsPerPageOptions={[6]}  
             checkboxSelection={true} 
             onSelectionModelChange={ (item:any) => {
                 setSelectionModel(item)
