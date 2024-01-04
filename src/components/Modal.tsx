@@ -1,4 +1,4 @@
-import PlantForm from './InventoryForm';
+import InventoryForm from './InventoryForm';
 
 
 type Props = {
@@ -30,7 +30,7 @@ const Modal = ( props: Props ) => {
                         </p>
                     </div>
                     <div className="flex flex-col items-center text-center mt-3 p-2">
-                        <PlantForm id={props.id } />
+                        <InventoryForm id={props.id } />
                     </div>
                 </div>
             </div>

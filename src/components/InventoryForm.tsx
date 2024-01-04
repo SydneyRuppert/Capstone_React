@@ -10,7 +10,7 @@ interface PlantFormProps {
   id?: string[]
 }
 
-const PlantForm = ( props:PlantFormProps) => {
+const InventoryForm = ( props:PlantFormProps) => {
   const { register, handleSubmit } = useForm({})
   const dispatch = useDispatch();
   const store = useStore();
@@ -41,7 +41,7 @@ const PlantForm = ( props:PlantFormProps) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label htmlFor="name"> Name</label>
-          <Input {...register('name')} name='namee' placeholder="Owner's Name" />
+          <Input {...register('name')} name='name' placeholder="Owner's Name" />
         </div>
         <div>
           <label htmlFor="family">Family</label>
@@ -74,4 +74,4 @@ const PlantForm = ( props:PlantFormProps) => {
   )
 }
 
-export default PlantForm
+export default InventoryForm
