@@ -9,6 +9,7 @@ const rootSlice = createSlice({
         species: "Plant's Species",
         common_name: "Plant's Common Name",
         origin: "Plant's Origin",
+        uid: ""
     },
     reducers: {
         chooseName: (state, action) => { state.name = action.payload},
@@ -16,9 +17,10 @@ const rootSlice = createSlice({
         chooseGenus: (state, action) => { state.genus = action.payload},
         chooseSpecies: (state, action) => { state.species = action.payload},
         chooseCommon: (state, action) => { state.common_name = action.payload},
-        chooseOrigin: (state, action) => { state.origin = action.payload}
+        chooseOrigin: (state, action) => { state.origin = action.payload},
+        chooseUID:(state, action) => {state.uid = action.payload}
     }
 })
 
 export const reducer = rootSlice.reducer;
-export const { chooseName, chooseFamily, chooseGenus, chooseSpecies, chooseCommon, chooseOrigin} = rootSlice.actions
+export const { chooseName, chooseFamily, chooseGenus, chooseSpecies, chooseCommon, chooseOrigin, chooseUID} = rootSlice.actions

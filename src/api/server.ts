@@ -1,19 +1,19 @@
 
-const token = '83c310fc6ad7cdeded154d67328ccb85cf88d4d51736d1c6'
+
 
 export const server_calls = {
-    get: async () => { 
-        const response = await fetch(`http://127.0.0.1:5000/api/plants`,
+    get: async (uid?:string ) => { 
+        const response = await fetch(`http://127.0.0.1:5000/api/plants/user/${uid}`,
         {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
-                'x-access-token': `Bearer ${token}`
+                
             }
 
         });
-
+ 
         if (!response.ok){
             throw new Error('Failed to fetch data from the server')
         }
@@ -27,8 +27,8 @@ export const server_calls = {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'x-access-token': `Bearer ${token}`
+                'Access-Control-Allow-Origin': '*'
+                
             },
             body: JSON.stringify(data)
 
@@ -41,14 +41,14 @@ export const server_calls = {
         return await response.json()
     },
 
-    update: async (id: string, data:any = {}) => {
+    update: async (id:string, data:any = {}) => {
         const response = await fetch(`http://127.0.0.1:5000/api/plants/${id}`,
         {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'x-access-token': `Bearer ${token}`
+                'Access-Control-Allow-Origin': '*'
+    
             },
             body: JSON.stringify(data)
 
@@ -67,8 +67,7 @@ export const server_calls = {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'x-access-token': `Bearer ${token}`
+                'Access-Control-Allow-Origin': '*'
             },
 
         })
