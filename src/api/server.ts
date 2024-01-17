@@ -3,7 +3,7 @@
 
 export const server_calls = {
     get: async (uid?:string ) => { 
-        const response = await fetch(`http://127.0.0.1:5000/api/plants/user/${uid}`,
+        const response = await fetch(`https://capstone-flask-project.onrender.com//api/plants/user/${uid}`,
         {
             method: 'GET',
             headers: {
@@ -22,7 +22,7 @@ export const server_calls = {
     },
 
     create: async (data: any = {}) => {
-        const response = await fetch(`http://127.0.0.1:5000/api/plants`,
+        const response = await fetch(`https://capstone-flask-project.onrender.com//api/plants`,
         {
             method: 'POST',
             headers: {
@@ -42,7 +42,7 @@ export const server_calls = {
     },
 
     update: async (id:string, data:any = {}) => {
-        const response = await fetch(`http://127.0.0.1:5000/api/plants/${id}`,
+        const response = await fetch(`https://capstone-flask-project.onrender.com//api/plants/${id}`,
         {
             method: 'PUT',
             headers: {
@@ -62,7 +62,7 @@ export const server_calls = {
     },
 
     delete: async (id: string) => {
-        const response = await fetch(`http://127.0.0.1:5000/api/plants/${id}`,
+        const response = await fetch(`https://capstone-flask-project.onrender.com//api/plants/${id}`,
         {
             method: 'DELETE',
             headers: {
